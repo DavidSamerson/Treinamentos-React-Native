@@ -3,6 +3,7 @@ import './App.css';
 import David from './david';
 import User from './User';
 import foto from './imagem.png';
+import Lista from './Lista';
 
 class App extends Component {
 
@@ -38,27 +39,35 @@ class App extends Component {
         <header className="App-header">
 
 
-          <p>Meu Projeto em React Native {this.state.name}</p>
+          <p>Meu Projeto em React Native</p>
+          <p> {this.state.name}</p>
           <p>{this.state.email}</p>
           <button onClick={this.changeState}>Mudar Estado</button>
           <form>
-            <label> Nome: 
+            <p>
+              <label> Nome: 
               <input
+              class="name"
               type = "text"
               name = "name"
               value = {this.state.name} 
               onChange = {this.changeInput} >
               </input>
             </label>
-            <label> Email: 
-              <input
+            </p>
+            <p>
+            <label> Email:
+              <input 
+              class="email"
               type = "email"
               name = "email"
               value = {this.state.email} 
               onChange = {this.changeInput} >
               </input>
             </label>
+            </p>
           </form>
+          <Lista></Lista>
           {/* <User name="David Samerson 1" photo={foto}></User>
           <User name="David Samerson 2" photo={foto}></User>
           <User name="David Samerson 3" photo={foto}></User>
